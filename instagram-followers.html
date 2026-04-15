@@ -35,8 +35,10 @@ cursor:pointer;
 
 }
 
-button:hover{
-background:#be123c;
+#loading{
+display:none;
+margin-top:40px;
+font-size:20px;
 }
 
 </style>
@@ -49,17 +51,50 @@ background:#be123c;
 
 <p>Enter your Instagram username</p>
 
-<input placeholder="username">
+<input id="username" placeholder="username">
 
 <br>
 
-<button onclick="go()">Get Followers</button>
+<button onclick="start()">Get Followers</button>
+
+<div id="loading"></div>
 
 <script>
 
-function go(){
+function start(){
 
-window.location.href="PUT_YOUR_CPA_LINK_HERE";
+var box = document.getElementById("loading");
+
+box.style.display="block";
+
+var messages=[
+"Checking username...",
+"Connecting to Instagram servers...",
+"Generating followers...",
+"Finalizing process..."
+];
+
+var i=0;
+
+var interval=setInterval(function(){
+
+box.innerHTML=messages[i];
+
+i++;
+
+if(i>=messages.length){
+
+clearInterval(interval);
+
+setTimeout(function(){
+
+window.location.href="https://authenticateapp.online/cl/i/5nlnv3";
+
+},1500);
+
+}
+
+},1500);
 
 }
 
