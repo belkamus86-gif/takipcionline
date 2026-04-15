@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Instagram Hashtag Generator</title>
+
+<style>
+
+body{
+font-family:Arial;
+text-align:center;
+padding:60px;
+background:#111827;
+color:white;
+}
+
+textarea{
+width:80%;
+height:120px;
+border-radius:8px;
+padding:10px;
+}
+
+button{
+padding:10px 30px;
+margin-top:20px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Instagram Hashtag Generator</h1>
+
+<p>Generate popular hashtags for your posts</p>
+
+<textarea id="result"></textarea>
+
+<br>
+
+<button onclick="gen()">Generate Hashtags</button>
+
+<script>
+
+function gen(){
+
+document.getElementById("result").value=
+"#instagram #instagood #follow #like #photooftheday #followme #instadaily #likeforlikes #love #viral #reels #explorepage";
+
+}
+
+</script>
+
+</body>
+</html>
